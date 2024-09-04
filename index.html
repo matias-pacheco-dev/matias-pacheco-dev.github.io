@@ -1,12 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <h1>this is my Portfolio</h1>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1b29;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #4b0082;
+            padding: 20px;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+            section.active {
+                opacity: 1;
+            }
+
+            section h2 {
+                font-size: 2em;
+                margin-bottom: 20px;
+                color: #dda0dd;
+            }
+
+            section p {
+                font-size: 1.2em;
+                margin-bottom: 30px;
+            }
+
+        .project {
+            background-color: #2e2a3b;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+            .project h3 {
+                margin-top: 0;
+                color: #dda0dd;
+            }
+
+        footer {
+            background-color: #4b0082;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+            footer p {
+                margin: 0;
+            }
+
+      
+        .fade {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+            .fade.in {
+                opacity: 1;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Portafolio</h1>
+    </header>
+
+    <section id="proyectos" class="active fade">
+        <h2>Proyectos</h2>
+        <div class="project">
+            <h3>Proyecto 1: Aplicación WinForms</h3>
+            <p>Descripción breve del proyecto. Puedes detallar las tecnologías utilizadas y los retos superados.</p>
+        </div>
+        <div class="project">
+            <h3>Proyecto 2: WebApp ASP.NET</h3>
+            <p>Descripción breve del proyecto. Incluye características clave y cómo el proyecto resuelve un problema específico.</p>
+        </div>
+        <div class="project">
+            <h3>Proyecto 3: Otra WebApp ASP.NET</h3>
+            <p>Descripción breve del proyecto. Habla sobre los aspectos técnicos y el impacto del proyecto.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tu Nombre - Contacto: tuemail@dominio.com</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            let sections = document.querySelectorAll('.fade');
+            sections.forEach(section => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    section.classList.add('in');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
