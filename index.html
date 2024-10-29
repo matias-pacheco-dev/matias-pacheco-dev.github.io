@@ -3,122 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Matias Pacheco</title>
+    <title>Portafolio - Tu Nombre</title>
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1b29;
-            color: #fff;
+            background-color: #12161C; /* Fondo azul oscuro */
+            color: #E0E6ED; /* Texto en gris claro */
             overflow-x: hidden;
-            display: flex;
-            height: 100vh;
+            line-height: 1.6;
         }
 
-        /* Barra de navegación lateral */
-        .sidebar {
-            width: 220px;
-            background-color: #1e1b29;
-            padding: 20px;
-            position: fixed;
-            top: 0;
-            bottom: 0;
+        .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: space-between;
+            align-items: flex-start;
+            padding: 50px;
         }
 
         .profile {
+            width: 30%;
+            background-color: #1C2A3A; /* Fondo azul marino */
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
-            color: #fff;
+            color: #E0E6ED;
         }
 
             .profile img {
                 border-radius: 50%;
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
                 object-fit: cover;
-                border: 2px solid #dda0dd;
-                margin-bottom: 15px;
+                border: 3px solid #4E92DF; /* Azul neón */
+                margin-bottom: 20px;
             }
 
-            .profile h1 {
-                color: #dda0dd;
-                font-size: 1.5em;
+            .profile h2 {
+                font-size: 1.6em;
                 margin: 10px 0;
+                color: #4E92DF; /* Azul neón */
             }
 
-            .profile p {
-                margin: 0;
-                color: #bbb;
-            }
-
-        .sidebar nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-            .sidebar nav a {
-                color: #dda0dd;
+            .profile a {
                 text-decoration: none;
+                color: #4E92DF; /* Azul neón */
+                font-weight: bold;
                 font-size: 1.1em;
-                cursor: pointer;
+                display: block;
+                margin-top: 10px;
             }
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-            .social-links a {
-                color: #dda0dd;
-                text-decoration: none;
-                font-size: 1.5em;
-            }
-
-        /* Contenedor principal con secciones */
-        .main-content {
-            margin-left: 240px;
-            padding: 50px;
-            flex-grow: 1;
-            display: flex;
-            transition: transform 0.5s ease;
-            width: 400%; /* Aumentado para el deslizamiento */
-        }
-
-        .section {
-            width: 100vw;
-            flex-shrink: 0;
-            padding: 50px;
-        }
-
-        .main-content h2 {
-            font-size: 3em;
-            color: #dda0dd;
-            margin-bottom: 10px;
-        }
-
-        .main-content p {
-            font-size: 1.2em;
-            color: #ddd;
-        }
-
-        /* Sección de proyectos */
         .projects {
-            margin-top: 40px;
+            width: 65%;
         }
+
+            .projects h2 {
+                font-size: 2em;
+                margin-bottom: 30px;
+                color: #4E92DF; /* Azul neón */
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
 
         .project {
-            background-color: #2e2a3b;
+            background-color: #1A1F27; /* Azul oscuro */
             margin: 20px 0;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease;
         }
 
@@ -127,51 +81,47 @@
             }
 
             .project h3 {
-                color: #dda0dd;
-                font-size: 1.5em;
                 margin-top: 0;
+                color: #4E92DF; /* Azul neón */
+                font-size: 1.5em;
             }
 
             .project p {
                 margin-bottom: 0;
-                color: #ccc;
+            }
+
+        footer {
+            background-color: #1C2A3A; /* Azul marino */
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+            footer a {
+                color: #4E92DF; /* Azul neón */
+                text-decoration: none;
+                font-weight: bold;
             }
     </style>
 </head>
 <body>
-    <!-- Barra de navegación lateral -->
-    <div class="sidebar">
+    <div class="container">
         <div class="profile">
             <img src="https://matias-pacheco-dev.github.io/images/fotocv.png" alt="Foto">
-            <h1>Matias Pacheco</h1>
+            <h2>Matias Pacheco</h2>
             <p>Backend Developer</p>
+            <a href="https://www.linkedin.com/in/matias-pacheco-dev" target="_blank">LinkedIn</a>
         </div>
-        <nav>
-            <a onclick="slideTo(0)">About</a>
-            <a onclick="slideTo(1)">My Skills</a>
-            <a onclick="slideTo(2)">Projects</a>
-            <a onclick="slideTo(3)">Contact</a>
-        </nav>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/matias-pacheco-dev" target="_blank">in</a>
-            <a href="https://github.com/tu-usuario" target="_blank">GH</a>
-        </div>
-    </div>
 
-    <!-- Contenedor de secciones con deslizamiento -->
-    <div class="main-content">
-        <section id="about" class="section">
-            <h2>Hi, I'm Matias,</h2>
-            <p>Backend Developer</p>
-            <p>Email: <a href="mailto:matias.pacheco.dev@gmail.com" style="color: #dda0dd;">matias.pacheco.dev@gmail.com</a></p>
-        </section>
-
-        <section id="skills" class="section">
-            <h2>My Skills</h2>
-            <p>Descripción breve de tus habilidades y conocimientos técnicos.</p>
-        </section>
-
-        <section id="projects" class="section projects">
+        <div class="projects">
             <h2>Projects</h2>
             <div class="project">
                 <h3><a href="https://github.com/tu-usuario/dumpsters-rent-and-management#readme" target="_blank">Project 1: Dumpsters Rent And Management</a></h3>
@@ -185,20 +135,12 @@
                 <h3><a href="https://github.com/tu-usuario/webapp-budget-tracking#readme" target="_blank">Project 3: WebApp Budget Tracking</a></h3>
                 <p>Descripción breve del proyecto. Habla sobre los aspectos técnicos y el impacto del proyecto.</p>
             </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Información adicional de contacto o un mensaje de cierre.</p>
-        </section>
+        </div>
     </div>
 
-    <script>
-        // Función para deslizar hacia la sección seleccionada
-        function slideTo(sectionIndex) {
-            const mainContent = document.querySelector('.main-content');
-            mainContent.style.transform = `translateX(-${sectionIndex * 100}vw)`;
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Matias Pacheco - Contact: matias.pacheco.dev@gmail.com</p>
+    </footer>
 </body>
 </html>
+
