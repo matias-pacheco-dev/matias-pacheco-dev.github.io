@@ -11,14 +11,13 @@
             background-color: #1e1b29;
             color: #fff;
             overflow-x: hidden;
-            line-height: 1.6;
             display: flex;
             height: 100vh;
         }
 
         /* Barra de navegación lateral */
         .sidebar {
-            width: 200px;
+            width: 220px;
             background-color: #1e1b29;
             padding: 20px;
             position: fixed;
@@ -27,31 +26,63 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
         }
 
-            .sidebar h1 {
+        .profile {
+            text-align: center;
+            color: #fff;
+        }
+
+            .profile img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border: 2px solid #dda0dd;
+                margin-bottom: 15px;
+            }
+
+            .profile h1 {
                 color: #dda0dd;
-                font-size: 2em;
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
+
+            .profile p {
                 margin: 0;
-                padding-bottom: 20px;
+                color: #bbb;
             }
 
-            .sidebar nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+            .sidebar nav a {
+                color: #dda0dd;
+                text-decoration: none;
+                font-size: 1.1em;
             }
 
-                .sidebar nav a {
-                    color: #dda0dd;
-                    text-decoration: none;
-                    font-size: 1.1em;
-                }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+            .social-links a {
+                color: #dda0dd;
+                text-decoration: none;
+                font-size: 1.5em;
+            }
 
         /* Contenido principal */
         .main-content {
-            margin-left: 220px;
+            margin-left: 240px;
             padding: 50px;
             flex-grow: 1;
         }
@@ -59,7 +90,7 @@
             .main-content h2 {
                 font-size: 3em;
                 color: #dda0dd;
-                margin-bottom: 0;
+                margin-bottom: 10px;
             }
 
             .main-content p {
@@ -67,16 +98,27 @@
                 color: #ddd;
             }
 
+        /* Botón de contacto */
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            color: #dda0dd;
+            border: 2px solid #dda0dd;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .contact-button:hover {
+                background-color: #dda0dd;
+                color: #1e1b29;
+            }
+
+        /* Sección de proyectos */
         .projects {
             margin-top: 40px;
         }
-
-            .projects h2 {
-                font-size: 2em;
-                color: #dda0dd;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
 
         .project {
             background-color: #2e2a3b;
@@ -101,46 +143,38 @@
                 margin-bottom: 0;
                 color: #ccc;
             }
-
-        /* Botón de contacto */
-        .contact-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            color: #dda0dd;
-            border: 2px solid #dda0dd;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-            .contact-button:hover {
-                background-color: #dda0dd;
-                color: #1e1b29;
-            }
     </style>
 </head>
 <body>
     <!-- Barra de navegación lateral -->
     <div class="sidebar">
-        <h1>M</h1>
-        <p>Matias Pacheco</p>
+        <div class="profile">
+            <img src="https://matias-pacheco-dev.github.io/images/fotocv.png" alt="Foto">
+            <h1>Matias Pacheco</h1>
+            <p>Backend Developer</p>
+        </div>
         <nav>
-            <a href="#">About</a>
-            <a href="#">My Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#skills">My Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/matias-pacheco-dev" target="_blank">in</a>
+            <a href="https://github.com/tu-usuario" target="_blank">GH</a>
+        </div>
     </div>
 
     <!-- Contenido principal -->
     <div class="main-content">
-        <h2>Hi, I'm Matias, <br>web developer</h2>
-        <p>Backend Developer / WordPress Expert</p>
-        <a href="mailto:matias.pacheco.dev@gmail.com" class="contact-button">Contact me!</a>
+        <section id="about">
+            <h2>Hi, I'm Matias,<br>web developer</h2>
+            <p>Backend Developer</p>
+            <a href="mailto:matias.pacheco.dev@gmail.com" class="contact-button">Contact me!</a>
+        </section>
 
-        <div class="projects">
+        <section id="projects" class="projects">
             <h2>Projects</h2>
             <div class="project">
                 <h3><a href="https://github.com/tu-usuario/dumpsters-rent-and-management#readme" target="_blank">Project 1: Dumpsters Rent And Management</a></h3>
@@ -154,7 +188,7 @@
                 <h3><a href="https://github.com/tu-usuario/webapp-budget-tracking#readme" target="_blank">Project 3: WebApp Budget Tracking</a></h3>
                 <p>Descripción breve del proyecto. Habla sobre los aspectos técnicos y el impacto del proyecto.</p>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>
