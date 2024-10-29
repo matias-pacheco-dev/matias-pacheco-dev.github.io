@@ -66,6 +66,7 @@
                 color: #dda0dd;
                 text-decoration: none;
                 font-size: 1.1em;
+                cursor: pointer;
             }
 
         .social-links {
@@ -80,40 +81,32 @@
                 font-size: 1.5em;
             }
 
-        /* Contenido principal */
+        /* Contenedor principal con secciones */
         .main-content {
             margin-left: 240px;
             padding: 50px;
             flex-grow: 1;
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 400%; /* Aumentado para el deslizamiento */
         }
 
-            .main-content h2 {
-                font-size: 3em;
-                color: #dda0dd;
-                margin-bottom: 10px;
-            }
+        .section {
+            width: 100vw;
+            flex-shrink: 0;
+            padding: 50px;
+        }
 
-            .main-content p {
-                font-size: 1.2em;
-                color: #ddd;
-            }
-
-        /* Botón de contacto */
-        .contact-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
+        .main-content h2 {
+            font-size: 3em;
             color: #dda0dd;
-            border: 2px solid #dda0dd;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            margin-bottom: 10px;
         }
 
-            .contact-button:hover {
-                background-color: #dda0dd;
-                color: #1e1b29;
-            }
+        .main-content p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
 
         /* Sección de proyectos */
         .projects {
@@ -154,11 +147,10 @@
             <p>Backend Developer</p>
         </div>
         <nav>
-            <a href="#about">About</a>
-            <a href="#skills">My Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+            <a onclick="slideTo(0)">About</a>
+            <a onclick="slideTo(1)">My Skills</a>
+            <a onclick="slideTo(2)">Projects</a>
+            <a onclick="slideTo(3)">Contact</a>
         </nav>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/matias-pacheco-dev" target="_blank">in</a>
@@ -166,15 +158,20 @@
         </div>
     </div>
 
-    <!-- Contenido principal -->
+    <!-- Contenedor de secciones con deslizamiento -->
     <div class="main-content">
-        <section id="about">
-            <h2>Hi, I'm Matias,<br>web developer</h2>
+        <section id="about" class="section">
+            <h2>Hi, I'm Matias,</h2>
             <p>Backend Developer</p>
-            <a href="mailto:matias.pacheco.dev@gmail.com" class="contact-button">Contact me!</a>
+            <p>Email: <a href="mailto:matias.pacheco.dev@gmail.com" style="color: #dda0dd;">matias.pacheco.dev@gmail.com</a></p>
         </section>
 
-        <section id="projects" class="projects">
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
+            <p>Descripción breve de tus habilidades y conocimientos técnicos.</p>
+        </section>
+
+        <section id="projects" class="section projects">
             <h2>Projects</h2>
             <div class="project">
                 <h3><a href="https://github.com/tu-usuario/dumpsters-rent-and-management#readme" target="_blank">Project 1: Dumpsters Rent And Management</a></h3>
@@ -189,6 +186,19 @@
                 <p>Descripción breve del proyecto. Habla sobre los aspectos técnicos y el impacto del proyecto.</p>
             </div>
         </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Información adicional de contacto o un mensaje de cierre.</p>
+        </section>
     </div>
+
+    <script>
+        // Función para deslizar hacia la sección seleccionada
+        function slideTo(sectionIndex) {
+            const mainContent = document.querySelector('.main-content');
+            mainContent.style.transform = `translateX(-${sectionIndex * 100}vw)`;
+        }
+    </script>
 </body>
 </html>
