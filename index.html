@@ -20,6 +20,7 @@
             justify-content: space-between;
             align-items: flex-start;
             padding: 50px;
+            padding-bottom: 80px; /* added space for footer */
         }
 
         .profile {
@@ -30,63 +31,70 @@
             color: #E0E6ED;
         }
 
+        .profile img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid #4E92DF;
+            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto;
+        }
 
-            .profile img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border: 3px solid #4E92DF;
-    margin-bottom: 20px;
-    display: block;
-    margin: 0 auto;
-}
-
-            .profile h2 {
-                font-size: 1.6em;
-                margin: 10px 0;
-                color: #4E92DF;
-            }
+        .profile h2 {
+            font-size: 1.6em;
+            margin: 10px 0;
+            color: #4E92DF;
+        }
 
         .contact-info, .skills, .education {
             margin-top: 20px;
         }
 
-            .contact-info p, .skills p, .education p {
-                margin: 5px 0;
-            }
+        .contact-info p, .skills p, .education p {
+            margin: 5px 0;
+        }
 
-            .contact-info a {
-                color: #71A8E8;
-                text-decoration: none;
-                font-weight: bold;
-            }
+        .contact-info a {
+            color: #71A8E8;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-                .contact-info a:hover {
-                    color: #4E92DF;
-                }
+        .contact-info a:hover {
+            color: #4E92DF;
+        }
 
-            .skills h3, .education h3 {
-                font-size: 1.3em;
-                color: #4E92DF;
-                margin-bottom: 10px;
-            }
+        .skills h3, .education h3 {
+            font-size: 1.3em;
+            color: #4E92DF;
+            margin-bottom: 10px;
+        }
+        
+        .skills h4 {
+            margin: 10px 0 2px 0;
+            color: #A0B0C0;
+            font-size: 1em;
+        }
 
-        .projects {
+        .main-content {
             width: 65%;
+        }
+
+        .experience, .projects {
             margin-top: 20px; 
         }
 
+        .experience h2, .projects h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #4E92DF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-            .projects h2 {
-                font-size: 2em;
-                margin-bottom: 30px;
-                color: #4E92DF;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
-
-        .project {
+        .job, .project {
             background-color: #1A1F27;
             margin: 20px 0;
             padding: 20px;
@@ -95,20 +103,35 @@
             transition: transform 0.3s ease;
         }
 
-            .project:hover {
-                transform: translateY(-5px);
-            }
+        .job:hover, .project:hover {
+            transform: translateY(-5px);
+        }
 
-            .project h3 a {
-                color: #4E92DF;
-                text-decoration: none;
-                font-size: 1.5em;
-            }
+        .job h3, .project h3 a {
+            color: #4E92DF;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
 
-                .project h3 a:hover {
-                    color: #71A8E8;
-                    text-decoration: underline;
-                }
+        .project h3 a:hover {
+            color: #71A8E8;
+            text-decoration: underline;
+        }
+        
+        .job .date {
+            color: #71A8E8;
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .job ul {
+            padding-left: 20px;
+        }
+        
+        .job li {
+            margin-bottom: 10px;
+        }
 
         footer {
             background-color: #1C2A3A;
@@ -121,123 +144,154 @@
             box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
         }
 
-            footer p {
-                margin: 5px 0;
-            }
+        footer p {
+            margin: 5px 0;
+        }
 
-            footer a {
-                color: #4E92DF;
-                text-decoration: none;
-                font-weight: bold;
-            }
+        footer a {
+            color: #4E92DF;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="profile">
             <img src="https://matias-pacheco-dev.github.io/images/fotocv.png" alt="Photo">
-            <h2>Matias Pacheco</h2>
-            <p>.NET Backend Developer - 22 years old</p>
+            <h2>Matias Pacheco [cite: 1]</h2>
+            <p>AI Software Engineering Specialist [cite: 2]</p>
 
             <div class="contact-info">
-                <p>📞 +54 11 6473-8537</p>
+                <p>📞 +54 11 6473-8537 [cite: 7]</p>
                 <p>✉️ matias.pacheco.dev@gmail.com</p>
-                <p><a href="https://www.linkedin.com/in/matias-pacheco-dev" target="_blank">LinkedIn</a></p>
-                <p><a href="https://github.com/matias-pacheco-dev" target="_blank">GitHub</a></p>
-                <p>📍 Buenos Aires - Argentina</p>
+                <p><a href="https://www.linkedin.com/in/matias-pacheco-dev" target="_blank">LinkedIn</a> [cite: 7]</p>
+                <p><a href="https://matias-pacheco-dev.github.io/#contact" target="_blank">Portfolio Website</a> [cite: 9]</p>
+                <p>📍 Buenos Aires - Argentina [cite: 7]</p>
             </div>
 
             <div class="skills">
-                <h3>Skills</h3>
-                <h4>Backend Development</h4>
-                <p>C#, .NET, ASP.NET Core, ADO.NET, Entity Framework, LINQ</p>
-
-                <h4>Frontend & UI</h4>
-                <p>WinForms, SyncFusion</p>
-
-                <h4>Databases</h4>
-                <p>MySQL, SQL</p>
-
-                <h4>Testing</h4>
-                <p>NUnit</p>
-
-                <h4>DevOps & Tools</h4>
-                <p>Git, Jira, RESTful APIs, Dependency Injection</p>
+                <h3>Skills [cite: 10]</h3>
+                
+                <h4>AI/ML</h4>
+                <p>PyTorch, Scikit-Learn, Pandas, NumPy, OCR Systems [cite: 11]</p>
 
                 <h4>Languages</h4>
-                <p>English (C1 Level) - Spanish (Native)</p>
+                <p>Python, .NET [cite: 8] / English (C2) [cite: 15] - Spanish (Native)</p>
+                
+                <h4>Deployment/Environment</h4>
+                <p>Docker, Git [cite: 12]</p>
+
+                <h4>Databases</h4>
+                <p>MongoDB / NoSQL, SQL [cite: 13]</p>
+
+                <h4>QA & Testing</h4>
+                <p>TDD, Pytest[cite: 14], NUnit</p>
+
+                <h4>Other Tools & Frameworks</h4>
+                <p>ASP.NET Core, Entity Framework, WinForms, RESTful APIs, Jira</p>
             </div>
 
             <div class="education">
-                <h3>Education</h3>
-                <p>Technical Degree in Programming at the National Technological University (UTN) (2023 - Ongoing) (Expected Completion: 2026)</p>
+                <h3>Education [cite: 26]</h3>
+                <p>Associate Degree in Programming [cite: 25] at UTN (Universidad Tecnologica Nacional) [cite: 24] (2023-2025) [cite: 27].</p>
+                <p>Completed first year of coursework (Algorithms, Data Structures, and Database Architecture)[cite: 28].</p>
+                <p>Studies currently paused since accepting a full-time role in the tech industry as an AI Software Engineer Specialist[cite: 29].</p>
             </div>
         </div>
 
-        <div class="projects">
-            <h2>Projects:</h2>
-            <div class="project">
-                <h3><a href="https://github.com/matias-pacheco-dev/Alquiler-Volquetes-Matias-Pacheco" target="_blank">Dumpster Rental Desktop Application</a></h3>
-                <p>
-                    This project involves the development of a dumpster rental management application using C# .NET, ADO.NET for MySQL, and a WinForms-based user interface. The application enables efficient management of dumpster rentals, including customer information, rental schedules, and payment processing. The design emphasizes interface-oriented principles to ensure flexibility and ease of maintenance.
-                </p>
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>User-friendly interface built with WinForms for managing dumpster rentals.</li>
-                    <li>Efficient database management and operations using ADO.NET with MySQL.</li>
-                    <li>Asynchronous processing to enhance responsiveness and performance.</li>
-                    <li>Conducted tests using NUnit to ensure code quality and application reliability.</li>
-                    <li>Interface-oriented design for better flexibility and scalability.</li>
-                </ul>
-                <p><strong>Technologies Used:</strong></p>
-                <ul>
-                    <li>C# .NET (WinForms)</li>
-                    <li>Entity Framework Core / ADO.NET</li>
-                    <li>MySQL</li>
-                    <li>Dependency Injection</li>
-                    <li>NUnit (Testing)</li>
-                </ul>
+        <div class="main-content">
+            <div class="experience">
+                <h2>Experience [cite: 16]</h2>
+                <div class="job">
+                    <h3>AI Software Engineer Specialist [cite: 17]</h3>
+                    <p class="date">June 2025 - Present [cite: 18]</p>
+                    <ul>
+                        <li><strong>AI Agent Architecture & Evaluation:</strong> Designed and evaluated multi-stage AI agent workflows[cite: 19].</li>
+                        <li><strong>Test-Driven Software Engineering:</strong> Created unit tests, F2P (Fail-to-Pass) verification suites, and parsing scripts to validate code functionality inside Docker environments[cite: 20].</li>
+                        <li><strong>Multimodal Data Processing:</strong> Handled complex datasets across diverse formats to train models on real world data extraction and reasoning tasks[cite: 21].</li>
+                        <li><strong>Advanced Debugging:</strong> Executed structured test and patch trajectories to systematically debug Python codebases, resolve failing test cases, and implement optimal Golden solutions[cite: 22].</li>
+                        <li><strong>Quality Assurance & Rubric Design:</strong> Developed expert level evaluation rubrics to benchmark model performance, verify algorithmic accuracy, and ensure strict compliance with deterministic prompt requirements[cite: 23].</li>
+                    </ul>
+                </div>
             </div>
-            <div class="project">
-                <h3><a href="https://github.com/matias-pacheco-dev/Github-User-Activity" target="_blank" rel="noopener noreferrer">Github User Activity ConsoleApp</a></h3>
-                <p>
-                    This project is a simple command-line interface (CLI) application developed in C# .NET that allows users to fetch and display the recent activity of any GitHub user. The application uses the GitHub API to retrieve the user's events, such as commits, issues, and stars, and displays them in a readable format in the terminal.
-                </p>
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>Fetches and displays recent GitHub activity for a specified username.</li>
-                    <li>Supports different event types such as commits (PushEvent), issue actions (IssuesEvent), and starred repositories (WatchEvent).</li>
-                    <li>Gracefully handles errors, such as invalid usernames or API request failures.</li>
-                    <li>Implemented with asynchronous HTTP requests and JSON parsing.</li>
-                </ul>
-                <p><strong>Technologies Used:</strong></p>
-                <ul>
-                    <li>C# .NET (Console App)</li>
-                    <li>GitHub API (RESTful API)</li>
-                    <li>Newtonsoft.Json</li>
-                    <li>HttpClient</li>
-                    <li>LINQ</li>
-                </ul>
+
+            <div class="projects">
+                <h2>Projects:</h2>
+                <div class="project">
+                    <h3><a href="https://github.com/matias-pacheco-dev/Alquiler-Volquetes-Matias-Pacheco" target="_blank">Dumpster Rental Desktop Application</a></h3>
+                    <p>
+                        This project involves the development of a dumpster rental management application using C# .NET, ADO.NET for MySQL, and a WinForms-based user interface. The application enables efficient management of dumpster rentals, including customer information, rental schedules, and payment processing. The design emphasizes interface-oriented principles to ensure flexibility and ease of maintenance.
+                    </p>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>User-friendly interface built with WinForms for managing dumpster rentals.</li>
+                        <li>Efficient database management and operations using ADO.NET with MySQL.</li>
+                        <li>Asynchronous processing to enhance responsiveness and performance.</li>
+                        <li>Conducted tests using NUnit to ensure code quality and application reliability.</li>
+                        <li>Interface-oriented design for better flexibility and scalability.</li>
+                    </ul>
+                    <p><strong>Technologies Used:</strong></p>
+                    <ul>
+                        <li>C# .NET (WinForms)</li>
+                        <li>Entity Framework Core / ADO.NET</li>
+                        <li>MySQL</li>
+                        <li>Dependency Injection</li>
+                        <li>NUnit (Testing)</li>
+                    </ul>
+                </div>
+                
+                <div class="project">
+                    <h3><a href="https://github.com/matias-pacheco-dev/Github-User-Activity" target="_blank" rel="noopener noreferrer">Github User Activity ConsoleApp</a></h3>
+                    <p>
+                        This project is a simple command-line interface (CLI) application developed in C# .NET that allows users to fetch and display the recent activity of any GitHub user. The application uses the GitHub API to retrieve the user's events, such as commits, issues, and stars, and displays them in a readable format in the terminal.
+                    </p>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Fetches and displays recent GitHub activity for a specified username.</li>
+                        <li>Supports different event types such as commits (PushEvent), issue actions (IssuesEvent), and starred repositories (WatchEvent).</li>
+                        <li>Gracefully handles errors, such as invalid usernames or API request failures.</li>
+                        <li>Implemented with asynchronous HTTP requests and JSON parsing.</li>
+                    </ul>
+                    <p><strong>Technologies Used:</strong></p>
+                    <ul>
+                        <li>C# .NET (Console App)</li>
+                        <li>GitHub API (RESTful API)</li>
+                        <li>Newtonsoft.Json</li>
+                        <li>HttpClient</li>
+                        <li>LINQ</li>
+                    </ul>
+                </div>
+                
+                <div class="project">
+                    <h3><a href="https://github.com/matias-pacheco-dev/Expense-Tracker" target="_blank" rel="noopener noreferrer">Web App ExpenseTracker</a></h3>
+                    <p>
+                        ExpenseTracker Application
+                        This project involves the development of an ExpenseTracker application using ASP.NET Core MVC and the SyncFusion Component Library to provide a responsive and modern user interface. The application allows users to easily manage their expenses with seamless CRUD operations, focusing on both usability and performance.
+                    </p>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Developed using ASP.NET Core MVC for a scalable and maintainable architecture.</li>
+                        <li>Utilized SyncFusion Component Library to create a responsive, modern UI.</li>
+                        <li>Implemented full CRUD operations for managing expenses.</li>
+                        <li>Focused on usability to ensure a user-friendly experience.</li>
+                        <li>Optimized for performance to handle large volumes of data efficiently.</li>
+                    </ul>
+                    <p><strong>Technologies Used:</strong></p>
+                    <ul>
+                        <li>ASP.NET Core MVC</li>
+                        <li>Entity Framework Core</li>
+                        <li>SQL</li>
+                        <li>SyncFusion Component Library</li>
+                        <li>LINQ</li>
+                        <li>RESTful API</li>
+                    </ul>
+                </div>
             </div>
-            <div class="project">
-                <h3><a href="https://github.com/matias-pacheco-dev/Expense-Tracker" target="_blank" rel="noopener noreferrer">Web App ExpenseTracker</a></h3>
-                <p>
-                    ExpenseTracker Application
-                    This project involves the development of an ExpenseTracker application using ASP.NET Core MVC and the SyncFusion Component Library to provide a responsive and modern user interface. The application allows users to easily manage their expenses with seamless CRUD operations, focusing on both usability and performance.
-                </p>
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>Developed using ASP.NET Core MVC for a scalable and maintainable architecture.</li>
-                    <li>Utilized SyncFusion Component Library to create a responsive, modern UI.</li>
-                    <li>Implemented full CRUD operations for managing expenses.</li>
-                    <li>Focused on usability to ensure a user-friendly experience.</li>
-                    <li>Optimized for performance to handle large volumes of data efficiently.</li>
-                </ul>
-                <p><strong>Technologies Used:</strong></p>
-                <ul>
-                    <li>ASP.NET Core MVC</li>
-                    <li>Entity Framework Core</li>
-                    <li>SQL</li>
-                    <li>SyncFusion Component Library</li>
-                    <li>LINQ</li>
-                    <li>RESTful API</li>
+        </div>
+    </div>
+    <footer>
+        <p>Portfolio adapted for Matías Pacheco.</p>
+    </footer>
+</body>
+</html>
